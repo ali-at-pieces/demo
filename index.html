@@ -3,30 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Color Palette</title>
+    <title>Client Details Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <h1>Interactive Color Palette</h1>
-    </header>
-    <main class="dashboard">
-        <section class="palette">
-            <h2>Color Palette</h2>
-            <div class="color-box" data-color="#0D1821" style="background-color: #0D1821;">#0D1821</div>
-            <div class="color-box" data-color="#344966" style="background-color: #344966;">#344966</div>
-            <div class="color-box" data-color="#E6AACE" style="background-color: #E6AACE; color: #0D1821;">#E6AACE</div>
-            <div class="color-box" data-color="#F0F4EF" style="background-color: #F0F4EF; color: #344966;">#F0F4EF</div>
-            <div class="color-box" data-color="#BFCC94" style="background-color: #BFCC94; color: #0D1821;">#BFCC94</div>
-        </section>
-        <section class="preview">
-            <h2>Preview Section</h2>
-            <div class="preview-area">
-                <p>Click a color above to apply it here.</p>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Client Details</h1>
+        </header>
+
+        <!-- Client Info Section -->
+        <section class="client-info">
+            <div class="info">
+                <h2>VANSHIKA OMKAR</h2>
+                <p>Total Bill Amount: <span class="highlight">₹7,00,689.00</span></p>
+                <p>Total Payment Received: <span class="highlight">₹689.00</span></p>
+                <p>Net Balance: <span class="highlight">₹7,00,000.00</span></p>
+                <p>Zone: <strong>NORTH</strong></p>
+                <p>State: <strong>Rajasthan</strong></p>
             </div>
-            <button class="reset-button">Reset</button>
+            <div class="actions">
+                <button class="primary-button">Edit</button>
+                <button class="primary-button">Print</button>
+                <button class="primary-button">Settlement</button>
+                <button class="primary-button">View Settlement</button>
+            </div>
         </section>
-    </main>
-    <script src="script.js"></script>
+
+        <!-- Sales and Payments -->
+        <div class="sections">
+            <!-- Sales Section -->
+            <section class="sales">
+                <h2>SALES</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SR NO.</th>
+                            <th>DATE</th>
+                            <th>SHOP BILL</th>
+                            <th>BOX QUANTITY</th>
+                            <th>SALE AMOUNT</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>17 Nov, 2024</td>
+                            <td>SETTLEMENT</td>
+                            <td>0</td>
+                            <td>₹7,00,689</td>
+                            <td><button class="edit-button">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="secondary-button">Add Sale</button>
+            </section>
+
+            <!-- Payments Section -->
+            <section class="payments">
+                <h2>PAYMENTS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>SR NO.</th>
+                            <th>DATE</th>
+                            <th>MODE</th>
+                            <th>AMOUNT PAID</th>
+                            <th>STORE</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>17 Nov, 2024</td>
+                            <td>CASH</td>
+                            <td>₹689</td>
+                            <td>SETTLEMENT</td>
+                            <td>
+                                <button class="edit-button">Edit</button>
+                                <button class="delete-button">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="secondary-button">Add Payment</button>
+            </section>
+        </div>
+    </div>
 </body>
 </html>
