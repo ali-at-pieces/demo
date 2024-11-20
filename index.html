@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Palette</title>
+    <title>Interactive Color Palette</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="palette">
-        <div class="color" style="background-color: #0D1821;">#0D1821</div>
-        <div class="color" style="background-color: #344966;">#344966</div>
-        <div class="color" style="background-color: #E6AACE;">#E6AACE</div>
-        <div class="color" style="background-color: #F0F4EF;">#F0F4EF</div>
-        <div class="color" style="background-color: #BFCC94;">#BFCC94</div>
-    </div>
+    <header class="header">
+        <h1>Interactive Color Palette</h1>
+    </header>
+    <main class="dashboard">
+        <section class="palette">
+            <h2>Color Palette</h2>
+            <div class="color-box" data-color="#0D1821" style="background-color: #0D1821;">#0D1821</div>
+            <div class="color-box" data-color="#344966" style="background-color: #344966;">#344966</div>
+            <div class="color-box" data-color="#E6AACE" style="background-color: #E6AACE; color: #0D1821;">#E6AACE</div>
+            <div class="color-box" data-color="#F0F4EF" style="background-color: #F0F4EF; color: #344966;">#F0F4EF</div>
+            <div class="color-box" data-color="#BFCC94" style="background-color: #BFCC94; color: #0D1821;">#BFCC94</div>
+        </section>
+        <section class="preview">
+            <h2>Preview Section</h2>
+            <div class="preview-area">
+                <p>Click a color above to apply it here.</p>
+            </div>
+            <button class="reset-button">Reset</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
